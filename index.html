@@ -352,45 +352,10 @@
 
           </label>
         
-      
-    
-  
-
-  
-    
-      
-        
           <label class="extra_field required col-md-6 col-sm-12 c-col-1">
             <label for="id_postal_code" class="extra_title" style="display: none;"><span class="text-danger">*</span> postal_code</label>
-            <input id="id_postal_code" class="postal_code" name="postal_code" type="text" placeholder="ZIp Code" value="" maxlength="5" />
+            <input id="id_postal_code" class="postal_code" name="postal_code" type="text" placeholder="Zip Code" value="" maxlength="5" />
           </label>
-        
-      
-    
-      
-        
-          <label class="col-md-6 col-sm-12 c-col-2">
-            <label for="id_phone" class="extra_title" style="display: none;"><span class="text-danger">*</span> phone</label>
-            <input id="id_phone" class="phone" name="phone" type="text" placeholder="Mobile Number (Optional)" value="" maxlength="10" />
-          </label>
-        
-      
-    
-  
-
-  
-    
-      
-        
-          <label class="extra_field required col-md-6 col-sm-12">
-            <label for="id_email" class="extra_title" style="display: none;"><span class="text-danger">*</span> email</label>
-            <input id="id_email" class="email" name="email" type="text" placeholder="Email Address" value="" maxlength="40" />
-          </label>
-        
-      
-    
-  
-
 </div>
 			        
 						<div class="">
@@ -503,10 +468,8 @@
 		'id_last_name': ['lastname', 'dmkt_l'],
 		'id_full_name': ['firstname','dmkt_f', 'lastname', 'dmkt_l'],
 		'id_address': 'address',
-		'id_email': ['email', 'dmkt_e'],
 		'id_postal_code': ['zip', 'dmkt_z'],
 		'id_state': ['state', 'dmkt_s'],
-		'id_phone': ['phone', 'dmkt_p'],
 		'id_utm_source': 'utm_source',
 		'id_utm_medium': 'utm_medium',
 		'id_utm_campaign': 'utm_campaign',
@@ -757,53 +720,6 @@
 
     <!--  -->
   
-    
-      
-        
-          field_rules.phone = {
-            "required": false,
-            "phoneUS": true
-          }
-        
-      
-    
-
-    
-      
-    
-      
-    
-      
-    
-      
-    
-
-    <!--  -->
-  
-
-  
-    
-      
-        field_rules.email = {
-          "required": true,
-          "email": true,
-          "maxlength": 40
-        }
-      
-    
-
-    
-      
-    
-      
-    
-      
-    
-      
-    
-
-    <!--  -->
-  
 
 
 	
@@ -812,7 +728,7 @@
 <script type="text/javascript">
   function urlpath() {
       //Specify which query string keys we're searching for
-      var params = ["email","Email","firstname","FirstName","lastname","LastName","zip","Zip","zipcode", "ZipCode", "phone", "Phone"];
+      var params = ["firstname","FirstName","lastname","LastName","zip","Zip","zipcode", "ZipCode"];
       var newUrl = document.createElement("a");
       newUrl.href = window.location.href;
       var searchString = newUrl.search;
